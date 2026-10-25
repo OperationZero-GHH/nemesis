@@ -1,0 +1,9 @@
+# =============================================================================
+#  Nemesis Toolkit — Development & Testing Dependencies
+#  Install: pip install -r requirements-dev.txt
+# =============================================================================
+
+pytest>=8.0.0                    # Test framework
+pytest-asyncio>=0.23.0           # Async test support
+respx>=0.21.0                    # Mock httpx requests in tests
+pytest-httpserver>=1.0.0         # Local HTTP server fixture for integration tests

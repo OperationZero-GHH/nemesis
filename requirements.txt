@@ -1,0 +1,47 @@
+# =============================================================================
+#  Nemesis Toolkit — Python Dependencies
+#  Install: pip install -r requirements.txt
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+#  Core CLI Framework
+# ---------------------------------------------------------------------------
+typer>=0.12.3                    # CLI application framework (commands, args, help)
+rich>=13.7.0                     # Terminal formatting, tables, spinners, progress bars
+questionary>=2.0.0               # Interactive menu prompts
+
+# ---------------------------------------------------------------------------
+#  Networking & HTTP
+# ---------------------------------------------------------------------------
+httpx[http2]>=0.27.0             # Async HTTP client with HTTP/2 support
+dnspython>=2.6.0                 # DNS resolution (subdomain enum, portscan)
+
+# ---------------------------------------------------------------------------
+#  Data Validation & Configuration
+# ---------------------------------------------------------------------------
+pydantic>=2.6.0                  # Data models and validation
+pydantic-settings>=2.2.0         # Settings management (env, YAML, .env)
+pydantic-settings[yaml]>=2.2.0   # YAML config file support
+PyYAML>=6.0.1                    # YAML parser (used by pydantic-settings)
+
+# ---------------------------------------------------------------------------
+#  Web Scraping & Parsing
+# ---------------------------------------------------------------------------
+beautifulsoup4>=4.12.0           # HTML parsing (param finder, login finder, etc.)
+Jinja2>=3.1.0                    # HTML report template rendering
+
+# ---------------------------------------------------------------------------
+#  Geolocation
+# ---------------------------------------------------------------------------
+geoip2>=4.8.0                    # MaxMind GeoIP2 database reader (optional local DBs)
+
+# ---------------------------------------------------------------------------
+#  Development & Testing (install with: pip install -r requirements.txt -r requirements-dev.txt)
+#  Or: pip install -e ".[dev]"
+# ---------------------------------------------------------------------------
+# See requirements-dev.txt for test dependencies
+
+# ---------------------------------------------------------------------------
+#  Native C++ Port Scanner Engine (Optional build dependency)
+# ---------------------------------------------------------------------------
+# pybind11>=2.12.0                # Optional: For compiling native Python extension (.pyd/.so)

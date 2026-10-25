@@ -1,0 +1,76 @@
+# =============================================================================
+#  Nemesis Toolkit — .gitignore
+# =============================================================================
+
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging & build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.whl
+
+# Test & coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Local configuration & secrets (NEVER commit real configs)
+.env
+.env.*
+!.env.example
+toolconfig.yaml
+*.local.yaml
+
+# Runtime data (SQLite, audit logs, snapshots)
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+audit.jsonl
+runs.log
+snapshots/
+
+# Generated reports & scanner PoC files
+auto_scan_*.html
+report_*.html
+clickjack-poc*.html
+reports/
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Agent / workflow metadata (not part of the toolkit)
+.agent/
+.agents/
+.gsd/
+.gemini/
+adapters/
+scripts/validate-*
+GSD-STYLE.md
+PROJECT_RULES.md
+model_capabilities.yaml

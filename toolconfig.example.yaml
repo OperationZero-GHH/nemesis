@@ -1,0 +1,57 @@
+# RedTeam CLI example configuration.
+#
+# Copy this file to ~/.toolconfig.yaml (or point REDTEAM_CONFIG_FILE at it)
+# and edit the values you need. All API keys are optional. Keep this file
+# private; it can contain credentials.
+#
+# Environment variables with the REDTEAM_ prefix override YAML values, for
+# example REDTEAM_REQUESTS_PER_SECOND=2 or REDTEAM_SERPAPI_KEY=...
+
+# ---------------------------------------------------------------------------
+# Authorization
+# ---------------------------------------------------------------------------
+# Leave this false unless every use of this config is covered by explicit,
+# written authorization. Prefer passing --confirm-authorized per scan instead.
+authorized_by_default: false
+
+# ---------------------------------------------------------------------------
+# Politeness / networking
+# ---------------------------------------------------------------------------
+respect_robots: true
+requests_per_second: 4.0
+timeout: 15.0
+max_retries: 2
+concurrency: 40
+crawl_max_pages: 30
+crawl_depth: 2
+
+# ---------------------------------------------------------------------------
+# Local storage (optional; defaults are platform-specific)
+# ---------------------------------------------------------------------------
+# data_dir: /path/to/redteam-data
+# db_path: /path/to/redteam-data/redteam.db
+# audit_log_path: /path/to/redteam-data/audit.jsonl
+# run_log_path: /path/to/redteam-data/runs.log
+
+# ---------------------------------------------------------------------------
+# Optional API keys
+# ---------------------------------------------------------------------------
+# Additional passive subdomain sources
+# securitytrails_api_key: ""
+# virustotal_api_key: ""
+
+# Breach exposure checks (paid HaveIBeenPwned API key)
+# hibp_api_key: ""
+
+# Search-backed features: dorking, mail discovery, and name OSINT.
+# Prefer one provider. SerpAPI takes precedence when both are configured.
+# serpapi_key: ""
+# google_cse_api_key: ""
+# google_cse_cx: ""
+
+# IP geolocation enrichment (ipinfo.io)
+# ipinfo_token: ""
+
+# Local MaxMind GeoLite2 databases (download these yourself from MaxMind)
+# geoip_db_path: /path/to/GeoLite2-City.mmdb
+# geoip_asn_db_path: /path/to/GeoLite2-ASN.mmdb

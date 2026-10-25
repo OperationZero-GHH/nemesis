@@ -1,0 +1,19 @@
+# Files to include in source distributions (sdist)
+include LICENSE
+include README.md
+include requirements.txt
+include requirements-dev.txt
+include pyproject.toml
+include toolconfig.example.yaml
+
+# Package data
+recursive-include nemesis_toolkit/templates *.html.j2
+recursive-include nemesis_toolkit/data *.txt
+
+# Exclude non-essential files
+exclude nemesis.py
+prune tests
+prune .agent
+prune .agents
+prune .gsd
+prune .gemini
